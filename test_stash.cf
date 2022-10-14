@@ -1,0 +1,14 @@
+body common control
+{
+	bundlesequence => {"stash_sync_cgit"};
+}
+
+bundle agrnt stash_sync_cgit
+{
+	vars:
+		"message" string => "Test!";
+	reports:
+		cfengine::
+			"message = $(message)";
+
+}
