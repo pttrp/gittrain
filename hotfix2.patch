@@ -1,0 +1,31 @@
+diff --git a/firstfile.py b/firstfile.py
+index 4e4e128..884e922 100755
+--- a/firstfile.py
++++ b/firstfile.py
+@@ -1,2 +1,6 @@
+ #!/usr/bin/env python3
+ print("hello, world!")
++print("another Test!")
++print("adding hotfix2")
++print("4th commit")
++
+diff --git a/test_stash.cf b/test_stash.cf
+deleted file mode 100644
+index 874d936..0000000
+--- a/test_stash.cf
++++ /dev/null
+@@ -1,14 +0,0 @@
+-body common control
+-{
+-	bundlesequence => {"stash_sync_cgit"};
+-}
+-
+-bundle agrnt stash_sync_cgit
+-{
+-	vars:
+-		"message" string => "Test!";
+-	reports:
+-		cfengine::
+-			"message = $(message)";
+-
+-}
